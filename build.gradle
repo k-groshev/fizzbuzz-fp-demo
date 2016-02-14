@@ -1,0 +1,23 @@
+plugins {
+    id 'me.champeau.gradle.jmh' version '0.3.0'
+}
+
+group 'com.p12v.ppj'
+
+apply plugin: 'java'
+apply plugin: 'me.champeau.gradle.jmh'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    jmh
+}
+
+dependencies {
+    jmh "org.openjdk.jmh:jmh-generator-annprocess:1.11.3"
+}
